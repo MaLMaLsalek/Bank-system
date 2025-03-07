@@ -7,8 +7,8 @@ public class UserInfo extends User {
     private double balance;
     private History history;
 
-    public UserInfo(String id, String password, double balance, History history) {
-        super(id, password);
+    public UserInfo(String id, long accountnum, String password, double balance, History history) {
+        super(id, accountnum, password);
         this.balance = balance;
         this.history = history;
     }
