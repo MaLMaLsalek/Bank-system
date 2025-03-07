@@ -12,25 +12,33 @@ public class DataBase {
 
     ArrayList<UserInfo> userInfos = new ArrayList<>();
 
-    public void addUser(User x){
+    public void addUser(User x) {
         user.add(x);
     }
 
-    public void addUserInfos(UserInfo x){
+    public void addUserInfos(UserInfo x) {
         userInfos.add(x);
     }
 
-    public boolean isUserExist(User x){
-        for (int i = 0 ; i < user.size() ; i ++){
-            if (x.equals(user.get(i))){
+    public ArrayList<User> getUser() {
+        return user;
+    }
+
+    public ArrayList<UserInfo> getUserInfos() {
+        return userInfos;
+    }
+
+    public boolean isUserExist(User x) {
+        for (int i = 0; i < user.size(); i++) {
+            if (x.equals(user.get(i))) {
                 return true;
             }
         }
         return false;
     }
 
-    public static DataBase getINSTANCE(){
-        if (INSTANCE == null){
+    public static DataBase getINSTANCE() {
+        if (INSTANCE == null) {
             INSTANCE = new DataBase();
         }
         return INSTANCE;

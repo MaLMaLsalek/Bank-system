@@ -1,9 +1,13 @@
 package bank.cli;
 
+import bank.data.DataBase;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        DataBase.getINSTANCE();
+        Accountnum accountnum = new Accountnum();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Hello");
