@@ -12,13 +12,13 @@ public class Main {
             System.out.println("2-LogIn");
             System.out.println("3-Close");
             String entry = scanner.next();
-            if (entry.equals("1")){
+            if (entry.equals("1")) {
 
             } else if (entry.equals("2")) {
 
             } else if (entry.equals("3")) {
                 break;
-            }else {
+            } else {
                 System.out.println("Please enter the correct word");
             }
         }
