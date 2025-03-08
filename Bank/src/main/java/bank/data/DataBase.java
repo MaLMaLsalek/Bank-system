@@ -1,7 +1,6 @@
 package bank.data;
 
 import bank.user.User;
-import bank.user.UserInfo;
 
 import java.util.ArrayList;
 
@@ -10,22 +9,12 @@ public class DataBase {
 
     ArrayList<User> user = new ArrayList<>();
 
-    ArrayList<UserInfo> userInfos = new ArrayList<>();
-
     public void addUser(User x) {
         user.add(x);
     }
 
-    public void addUserInfos(UserInfo x) {
-        userInfos.add(x);
-    }
-
     public ArrayList<User> getUser() {
         return user;
-    }
-
-    public ArrayList<UserInfo> getUserInfos() {
-        return userInfos;
     }
 
     public boolean isUserExist(User x) {

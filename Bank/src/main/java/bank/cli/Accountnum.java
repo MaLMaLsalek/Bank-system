@@ -8,7 +8,7 @@ public class Accountnum {
 
     public long createAccountNum() {
         long x = Year.now().getValue();
-        return (x * 100000000 + DataBase.getINSTANCE().getUser().size() + 1);
+        return (x * 100000000 + DataBase.getINSTANCE().getUser().size() );
     }
 
 }
