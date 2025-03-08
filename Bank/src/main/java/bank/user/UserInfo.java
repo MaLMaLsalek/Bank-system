@@ -1,7 +1,5 @@
 package bank.user;
 
-import bank.user.transaction.History;
-
 public class UserInfo extends User {
 
     private double balance;
