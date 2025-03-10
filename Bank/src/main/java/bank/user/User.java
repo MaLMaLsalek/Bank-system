@@ -9,6 +9,10 @@ public class User {
     private double balance;
     private ArrayList<String> history;
 
+    public User(){
+
+    }
+
     public User(String id, long accountnum, String password, double balance, ArrayList<String> History) {
         this.id = id;
         this.accountnum = accountnum;
