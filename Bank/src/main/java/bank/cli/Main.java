@@ -3,7 +3,6 @@ package bank.cli;
 import bank.data.DataBase;
 import bank.user.User;
 
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,6 +11,7 @@ public class Main {
         DataBase.getINSTANCE();
         Scanner scanner = new Scanner(System.in);
         SignUp signUp = new SignUp();
+        LogIn logIn = new LogIn();
         while (true) {
             System.out.println("Hello");
             System.out.println("Please select one of the options below with number");
@@ -27,7 +27,7 @@ public class Main {
                 while (true) {
                     if (entry1.equals("back") || entry1.equals("2")) {
                         break;
-                    } else if (signUp.isUserExist(entry1)) {
+                    } else if (logIn.isUserExist(entry1)) {
                         System.out.println("please enter another id");
                     } else {
                         signUp.setUserName(user, entry1);
@@ -56,7 +56,33 @@ public class Main {
 //                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getHistory());
 //                }
             } else if (entry.equals("2")) {
-
+                System.out.println("1-Pleasse enter your Id");
+                System.out.println("2-back");
+                String entry3 = scanner.next();
+                while (true) {
+                    if (entry3.equals("back") || entry3.equals("2")) {
+                        break;
+                    } else if (logIn.isUserExist(entry3)) {
+                        System.out.println("1-Plese enter your password");
+                        System.out.println("2-back");
+                        String entry4 = scanner.next();
+                        while (true) {
+                            if (entry4.equals("back") || entry4.equals("2")) {
+                                break;
+                            } else if (logIn.isUserPassTrue(entry4)) {
+                                System.out.println("welcome " + entry3);
+//                                from hear
+                            } else {
+                                System.out.println("wrong password");
+                                break;
+                            }
+                        }
+                        break;
+                    } else {
+                        System.out.println("this id not found");
+                        break;
+                    }
+                }
             } else if (entry.equals("3")) {
                 break;
             } else {

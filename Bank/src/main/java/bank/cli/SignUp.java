@@ -1,6 +1,5 @@
 package bank.cli;
 
-import bank.data.DataBase;
 import bank.user.User;
 
 import java.util.ArrayList;
@@ -8,15 +7,6 @@ import java.util.ArrayList;
 import static bank.cli.Hash.hashPassword;
 
 public class SignUp {
-
-    public boolean isUserExist(String id) {
-        for (int i = 0; i < DataBase.getINSTANCE().getUser().size(); i++) {
-            if (id.equals(DataBase.getINSTANCE().getUser().get(i).getId())) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     public void setUserName(User user, String id) {
         user.setId(id);
