@@ -2,8 +2,6 @@ package bank.cli;
 
 import bank.user.User;
 
-import java.util.ArrayList;
-
 import static bank.cli.Hash.hashPassword;
 
 public class SignUp {
@@ -18,9 +16,5 @@ public class SignUp {
 
     public void setUserPassword(User user, String pass) {
         user.setPassword(hashPassword(pass));
-    }
-
-    public void addToDataBase(ArrayList<User> users, User user) {
-        users.add(user);
     }
 }

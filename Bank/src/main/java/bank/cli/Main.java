@@ -40,7 +40,7 @@ public class Main {
                                 break;
                             } else {
                                 signUp.setUserPassword(user, entry2);
-                                signUp.addToDataBase(DataBase.getINSTANCE().getUser(), user);
+                                DataBase.getINSTANCE().addUser(user);
                                 System.out.println("your account is create");
                             }
                             break;
@@ -70,7 +70,7 @@ public class Main {
                             if (entry4.equals("back") || entry4.equals("2")) {
                                 break;
                             } else if (logIn.isUserPassTrue(entry4)) {
-                                System.out.println("welcome " + entry3);
+                                System.out.println("welcome : " + entry3);
 //                                from hear
                             } else {
                                 System.out.println("wrong password");

@@ -17,15 +17,6 @@ public class DataBase {
         return user;
     }
 
-    public boolean isUserExist(User x) {
-        for (int i = 0; i < user.size(); i++) {
-            if (x.equals(user.get(i))) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public static DataBase getINSTANCE() {
         if (INSTANCE == null) {
             INSTANCE = new DataBase();
