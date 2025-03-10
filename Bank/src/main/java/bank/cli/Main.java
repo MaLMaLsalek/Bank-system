@@ -22,20 +22,20 @@ public class Main {
                 System.out.println("1-Pleasse enter your Id");
                 System.out.println("2-back");
                 String entry1 = scanner.next();
-                while (true){
-                    if (entry1.equals("back") || entry1.equals("2")){
+                while (true) {
+                    if (entry1.equals("back") || entry1.equals("2")) {
                         break;
-                    }else {
-                        signUp.setUserName(user , entry1);
+                    } else {
+                        signUp.setUserName(user, entry1);
                         signUp.setUserAccountnum(user);
                         System.out.println("1-Plese enter your password");
                         System.out.println("2-back");
                         String entry2 = scanner.next();
-                        while (true){
-                            if (entry2.equals("back") || entry2.equals("2")){
+                        while (true) {
+                            if (entry2.equals("back") || entry2.equals("2")) {
                                 break;
-                            }else {
-                                signUp.setUserPassword(user,entry2);
+                            } else {
+                                signUp.setUserPassword(user, entry2);
                                 signUp.addToDataBase(DataBase.getINSTANCE().getUser(), user);
                             }
                             break;
@@ -44,7 +44,11 @@ public class Main {
                     System.out.println("your account is create");
                     break;
                 }
-
+//                this is for cheak the sign up
+//                for (int i = 0 ; i < DataBase.getINSTANCE().getUser().size() ; i ++){
+//                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getAccountnum());
+//                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getPassword());
+//                }
             } else if (entry.equals("2")) {
 
             } else if (entry.equals("3")) {

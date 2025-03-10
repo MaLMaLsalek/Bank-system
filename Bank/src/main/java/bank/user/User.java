@@ -9,7 +9,7 @@ public class User {
     private double balance;
     private ArrayList<String> history;
 
-    public User(){
+    public User() {
 
     }
 
@@ -57,7 +57,7 @@ public class User {
         return history;
     }
 
-    public void addHistoy(String History){
+    public void addHistoy(String History) {
         this.history.add(History);
     }
 }
