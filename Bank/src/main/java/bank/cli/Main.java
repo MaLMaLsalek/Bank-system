@@ -3,6 +3,7 @@ package bank.cli;
 import bank.data.DataBase;
 import bank.user.User;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,13 +20,15 @@ public class Main {
             System.out.println("3-Close");
             String entry = scanner.next();
             if (entry.equals("1")) {
-                User user = new User(null , 0 , null , 0 , new ArrayList<>());
+                User user = new User(null, 0, null, 0, new ArrayList<>());
                 System.out.println("1-Pleasse enter your Id");
                 System.out.println("2-back");
                 String entry1 = scanner.next();
                 while (true) {
                     if (entry1.equals("back") || entry1.equals("2")) {
                         break;
+                    } else if (signUp.isUserExist(entry1)) {
+                        System.out.println("please enter another id");
                     } else {
                         signUp.setUserName(user, entry1);
                         signUp.setUserAccountnum(user);
@@ -38,17 +41,19 @@ public class Main {
                             } else {
                                 signUp.setUserPassword(user, entry2);
                                 signUp.addToDataBase(DataBase.getINSTANCE().getUser(), user);
+                                System.out.println("your account is create");
                             }
                             break;
                         }
                     }
-                    System.out.println("your account is create");
                     break;
                 }
 //                this is for cheak the sign up
-//                for (int i = 0 ; i < DataBase.getINSTANCE().getUser().size() ; i ++){
+//                for (int i = 0; i < DataBase.getINSTANCE().getUser().size(); i++) {
 //                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getAccountnum());
 //                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getPassword());
+//                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getBalance());
+//                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getHistory());
 //                }
             } else if (entry.equals("2")) {
 
