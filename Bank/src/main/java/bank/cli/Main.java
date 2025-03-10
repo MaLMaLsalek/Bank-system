@@ -3,6 +3,7 @@ package bank.cli;
 import bank.data.DataBase;
 import bank.user.User;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -18,7 +19,7 @@ public class Main {
             System.out.println("3-Close");
             String entry = scanner.next();
             if (entry.equals("1")) {
-                User user = new User();
+                User user = new User(null , 0 , null , 0 , new ArrayList<>());
                 System.out.println("1-Pleasse enter your Id");
                 System.out.println("2-back");
                 String entry1 = scanner.next();
