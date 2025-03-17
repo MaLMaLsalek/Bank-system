@@ -1,4 +1,4 @@
-package bank.bankuser.user;
+package bank.bankuser.client;
 
 import bank.bankuser.BankUser;
 

@@ -1,7 +1,7 @@
 package bank.cli;
 
 import bank.data.DataBase;
-import bank.bankuser.user.User;
+import bank.bankuser.client.User;
 
 import java.util.ArrayList;
 import java.util.Scanner;

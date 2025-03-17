@@ -1,6 +1,6 @@
 package bank.data;
 
-import bank.bankuser.user.User;
+import bank.bankuser.client.User;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
 package bank.cli;
 
-import bank.bankuser.user.User;
+import bank.bankuser.client.User;
 
 import static bank.cli.Hash.hashPassword;
 
