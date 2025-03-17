@@ -1,4 +1,4 @@
-package bank.user;
+package bank.bankuser;
 
 import java.util.ArrayList;
 
