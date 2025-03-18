@@ -1,5 +1,6 @@
 package bank.cli;
 
+import bank.bankuser.client.transaction.Deposit;
 import bank.data.DataBase;
 import bank.bankuser.client.User;
 
@@ -12,6 +13,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         SignUp signUp = new SignUp();
         LogIn logIn = new LogIn();
+        Deposit deposit = new Deposit();
         while (true) {
             System.out.println("Hello");
             System.out.println("Please select one of the options below with number");
@@ -80,8 +82,33 @@ public class Main {
                                 System.out.println("4-History");
                                 System.out.println("5-back");
                                 String entry5 = scanner.next();
-                                while (true){
-                                    if (entry5.equals("back") || entry5.equals("5")) {
+                                if (entry5.equals("back") || entry5.equals("5")) {
+                                    break;
+                                }
+                                while (true) {
+                                    if (entry5.equals("1")) {
+                                        System.out.println("Please enter the price");
+                                        System.out.println("1-back");
+                                        String entry6 = scanner.next();
+                                        if (entry6.equals("1") || entry6.equals("back")){
+                                            break;
+                                        }
+                                        while (true) {
+                                            if (deposit.isMonyNumber(entry6)){
+                                                deposit.depositmoney(entry3 , Double.parseDouble(entry6));
+                                                System.out.println(Double.parseDouble(entry6));
+                                                System.out.println("The operation was successful.");
+                                                break;
+                                            }
+                                        }
+                                    } else if (entry5.equals("2")) {
+
+                                    } else if (entry5.equals("3")) {
+
+                                    } else if (entry5.equals("4")) {
+
+                                    } else {
+                                        System.out.println("Please enter the correct word");
                                         break;
                                     }
                                 }
@@ -89,7 +116,6 @@ public class Main {
                                 System.out.println("wrong password");
                                 break;
                             }
-                            break;
                         }
                         break;
                     } else {
