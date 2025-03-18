@@ -71,6 +71,10 @@ public class Main {
                                 break;
                             } else if (logIn.isUserPassTrue(entry4)) {
                                 System.out.println("welcome : " + entry3);
+                                System.out.println("Please select one of the options below with number");
+                                System.out.println("1-Deposit");
+                                System.out.println("2-Withdrawal");
+                                System.out.println("3-Transmission");
 //                                from hear
                             } else {
                                 System.out.println("wrong password");
