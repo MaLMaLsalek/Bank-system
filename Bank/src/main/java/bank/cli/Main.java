@@ -70,16 +70,26 @@ public class Main {
                             if (entry4.equals("back") || entry4.equals("2")) {
                                 break;
                             } else if (logIn.isUserPassTrue(entry4)) {
-                                System.out.println("welcome : " + entry3);
+                                System.out.println("Welcome : " + entry3);
+                                System.out.println("Balance = " + DataBase.getINSTANCE().getUser().
+                                        get(DataBase.getINSTANCE().findAccountIndexWithId(entry3)).getBalance());
                                 System.out.println("Please select one of the options below with number");
                                 System.out.println("1-Deposit");
                                 System.out.println("2-Withdrawal");
                                 System.out.println("3-Transmission");
-//                                from hear
+                                System.out.println("4-History");
+                                System.out.println("5-back");
+                                String entry5 = scanner.next();
+                                while (true){
+                                    if (entry5.equals("back") || entry5.equals("5")) {
+                                        break;
+                                    }
+                                }
                             } else {
                                 System.out.println("wrong password");
                                 break;
                             }
+                            break;
                         }
                         break;
                     } else {
