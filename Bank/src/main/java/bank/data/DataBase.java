@@ -35,6 +35,15 @@ public class DataBase {
         return -1;
     }
 
+    public int findAccountIndexWithId(String id) {
+        for (int i = 0; i < user.size(); i++) {
+            if (id.equals(user.get(i).getId())) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public static DataBase getINSTANCE() {
         if (INSTANCE == null) {
             INSTANCE = new DataBase();
