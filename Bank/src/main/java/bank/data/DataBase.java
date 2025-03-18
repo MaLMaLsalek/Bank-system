@@ -17,6 +17,15 @@ public class DataBase {
         return user;
     }
 
+    public boolean isAccountNumExist(long accountnum) {
+        for (int i = 0; i < user.size(); i++) {
+            if (accountnum == user.get(i).getAccountnum()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static DataBase getINSTANCE() {
         if (INSTANCE == null) {
             INSTANCE = new DataBase();
