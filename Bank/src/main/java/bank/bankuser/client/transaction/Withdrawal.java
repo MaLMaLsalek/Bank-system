@@ -6,7 +6,7 @@ public class Withdrawal {
         if (balance - drawalmoney >= 0){
             return balance - drawalmoney;
         }else {
-            System.out.println("There is not enough inventory");
+            System.out.println("There is not enough money");
             return balance;
         }
     }

@@ -26,6 +26,15 @@ public class DataBase {
         return false;
     }
 
+    public int findAccountIndex(long accountnum) {
+        for (int i = 0; i < user.size(); i++) {
+            if (accountnum == user.get(i).getAccountnum()) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public static DataBase getINSTANCE() {
         if (INSTANCE == null) {
             INSTANCE = new DataBase();
