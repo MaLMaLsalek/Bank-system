@@ -35,8 +35,4 @@ public class User extends BankUser {
     public ArrayList<String> getHistory() {
         return history;
     }
-
-    public void addHistoy(String History) {
-        this.history.add(History);
-    }
 }

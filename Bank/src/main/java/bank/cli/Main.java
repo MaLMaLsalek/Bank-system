@@ -95,11 +95,11 @@ public class Main {
                                         }
                                         while (true) {
                                             if (deposit.isMonyNumber(entry6)) {
-                                                deposit.depositmoney(entry3, Double.parseDouble(entry6));
-                                                System.out.println(Double.parseDouble(entry6));
+                                                deposit.depositMoney(entry3, Double.parseDouble(entry6));
+                                                deposit.addToHistory(entry3, Double.parseDouble(entry6));
                                                 System.out.println("The operation was successful.");
                                                 break;
-                                            }else {
+                                            } else {
                                                 System.out.println("please enter the number");
                                                 break;
                                             }

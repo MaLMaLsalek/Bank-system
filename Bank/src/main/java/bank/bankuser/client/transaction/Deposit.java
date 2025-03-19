@@ -2,7 +2,9 @@ package bank.bankuser.client.transaction;
 
 import bank.data.DataBase;
 
-import javax.xml.crypto.Data;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class Deposit {
 
@@ -21,10 +23,20 @@ public class Deposit {
         }
     }
 
-    public void depositmoney(String id, double mony) {
+    public void depositMoney(String id, double mony) {
         int x = DataBase.getINSTANCE().findAccountIndexWithId(id);
         double y = DataBase.getINSTANCE().getUser().get(x).getBalance();
         DataBase.getINSTANCE().getUser().get(x)
                 .setBalance(y + mony);
+    }
+
+    public void addToHistory(String id, double mony) {
+        LocalDate currentDate = LocalDate.now();
+        LocalTime currentTime = LocalTime.now();
+        int x = DataBase.getINSTANCE().findAccountIndexWithId(id);
+        ArrayList<String> y = DataBase.getINSTANCE().getUser().get(x).getHistory();
+        DataBase.getINSTANCE().getUser().get(x).getHistory()
+                .add("Deposit : " + mony + " at : " + currentDate + " " + currentTime);
+//        System.out.println("Deposit : " + mony + " at : " + currentDate + " " + currentTime);
     }
 }
