@@ -35,4 +35,10 @@ public class User extends BankUser {
     public ArrayList<String> getHistory() {
         return history;
     }
+
+    public void showArraylistIndex() {
+        for (int i = 0; i < history.size(); i++) {
+            System.out.println(history.get(i));
+        }
+    }
 }

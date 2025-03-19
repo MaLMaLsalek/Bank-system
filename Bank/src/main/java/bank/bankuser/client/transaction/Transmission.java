@@ -29,7 +29,7 @@ public class Transmission {
         double balance = DataBase.getINSTANCE().getUser().get(x).getBalance();
         if (balance - money > 0) {
             DataBase.getINSTANCE().getUser().get(x).getHistory()
-                    .addFirst("Transmission : " + money + "to" + accountnum + " at : " + currentDate + " " + currentTime);
+                    .addFirst("Transmission : " + money + " to " + accountnum + " at : " + currentDate + " " + currentTime);
             DataBase.getINSTANCE().getUser().get(accountIndex).getHistory()
                     .addFirst("receive : " + money + " at : " + currentDate + " " + currentTime);
         }

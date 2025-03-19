@@ -54,13 +54,6 @@ public class Main {
                     }
                     break;
                 }
-//                this is for cheak the sign up
-//                for (int i = 0; i < DataBase.getINSTANCE().getUser().size(); i++) {
-//                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getAccountnum());
-//                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getPassword());
-//                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getBalance());
-//                    System.out.println(DataBase.getINSTANCE().getUser().get(i).getHistory());
-//                }
             } else if (entry.equals("2")) {
                 System.out.println("1-Pleasse enter your Id");
                 System.out.println("2-back");
@@ -163,7 +156,17 @@ public class Main {
                                             }
                                         }
                                     } else if (entry5.equals("4")) {
-
+                                        DataBase.getINSTANCE().getUser().get(DataBase.getINSTANCE().
+                                                findAccountIndexWithId(entry3)).showArraylistIndex();
+                                        System.out.println("back");
+                                        while (true){
+                                            String entry10 = scanner.next();
+                                            if (entry10.equals("back")){
+                                                break;
+                                            }else {
+                                                System.out.println("Please enter back");
+                                            }
+                                        }
                                     } else {
                                         System.out.println("Please enter the correct word");
                                         break;
