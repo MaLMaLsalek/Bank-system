@@ -4,7 +4,6 @@ import bank.data.DataBase;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 
 public class Deposit {
 
@@ -36,6 +35,5 @@ public class Deposit {
         int x = DataBase.getINSTANCE().findAccountIndexWithId(id);
         DataBase.getINSTANCE().getUser().get(x).getHistory()
                 .addFirst("Deposit : " + mony + " at : " + currentDate + " " + currentTime);
-//        System.out.println("Deposit : " + mony + " at : " + currentDate + " " + currentTime);
     }
 }

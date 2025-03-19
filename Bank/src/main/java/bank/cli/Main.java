@@ -159,11 +159,11 @@ public class Main {
                                         DataBase.getINSTANCE().getUser().get(DataBase.getINSTANCE().
                                                 findAccountIndexWithId(entry3)).showArraylistIndex();
                                         System.out.println("back");
-                                        while (true){
+                                        while (true) {
                                             String entry10 = scanner.next();
-                                            if (entry10.equals("back")){
+                                            if (entry10.equals("back")) {
                                                 break;
-                                            }else {
+                                            } else {
                                                 System.out.println("Please enter back");
                                             }
                                         }

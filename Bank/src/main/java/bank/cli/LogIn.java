@@ -15,7 +15,7 @@ public class LogIn {
         return false;
     }
 
-    public boolean isUserPassTrue(String pass){
+    public boolean isUserPassTrue(String pass) {
         for (int i = 0; i < DataBase.getINSTANCE().getUser().size(); i++) {
             if (hashPassword(pass).equals(DataBase.getINSTANCE().getUser().get(i).getPassword())) {
                 return true;
