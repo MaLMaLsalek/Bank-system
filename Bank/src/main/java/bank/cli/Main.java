@@ -126,7 +126,42 @@ public class Main {
                                             }
                                         }
                                     } else if (entry5.equals("3")) {
-
+                                        System.out.println("Please enter the account number or back");
+                                        System.out.println("back");
+                                        String entry8 = scanner.next();
+                                        if (entry8.equals("back")) {
+                                            break;
+                                        }
+                                        while (true) {
+                                            if (deposit.isMonyNumber(entry8)) {
+                                                if (DataBase.getINSTANCE().isAccountNumExist(Long.parseLong(entry8))) {
+                                                    System.out.println("Please enter the price or back");
+                                                    System.out.println("back");
+                                                    String entry9 = scanner.next();
+                                                    if (entry9.equals("back")) {
+                                                        break;
+                                                    }
+                                                    while (true) {
+                                                        if (deposit.isMonyNumber(entry9)) {
+                                                            transmission.transmissionMony(entry3,
+                                                                    Double.parseDouble(entry9), Long.parseLong(entry8));
+                                                            transmission.addTransmissionToHistory(entry3,
+                                                                    Double.parseDouble(entry9), Long.parseLong(entry8));
+                                                            break;
+                                                        } else {
+                                                            System.out.println("please enter the number");
+                                                            break;
+                                                        }
+                                                    }
+                                                } else {
+                                                    System.out.println("This account number not found");
+                                                    break;
+                                                }
+                                            } else {
+                                                System.out.println("please enter the number");
+                                                break;
+                                            }
+                                        }
                                     } else if (entry5.equals("4")) {
 
                                     } else {
