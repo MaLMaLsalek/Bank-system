@@ -1,4 +1,4 @@
-package bank.cli;
+package bank.bankuser.client;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

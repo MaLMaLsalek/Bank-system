@@ -2,7 +2,7 @@ package bank.cli;
 
 import bank.data.DataBase;
 
-import static bank.cli.Hash.hashPassword;
+import static bank.bankuser.client.Hash.hashPassword;
 
 public class LogIn {
 

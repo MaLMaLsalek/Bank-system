@@ -1,10 +1,10 @@
-package bank.cli;
+package bank.bankuser.client;
 
 import bank.data.DataBase;
 
 import java.time.Year;
 
-public class Accountnum {
+public class AccountNumber {
 
     public long createAccountNum() {
         long x = Year.now().getValue();

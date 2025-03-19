@@ -1,8 +1,9 @@
 package bank.cli;
 
+import bank.bankuser.client.AccountNumber;
 import bank.bankuser.client.User;
 
-import static bank.cli.Hash.hashPassword;
+import static bank.bankuser.client.Hash.hashPassword;
 
 public class SignUp {
 
@@ -11,7 +12,7 @@ public class SignUp {
     }
 
     public void setUserAccountnum(User user) {
-        user.setAccountnum(new Accountnum().createAccountNum());
+        user.setAccountnum(new AccountNumber().createAccountNum());
     }
 
     public void setUserPassword(User user, String pass) {
