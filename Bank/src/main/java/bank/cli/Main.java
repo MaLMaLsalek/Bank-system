@@ -90,14 +90,17 @@ public class Main {
                                         System.out.println("Please enter the price");
                                         System.out.println("1-back");
                                         String entry6 = scanner.next();
-                                        if (entry6.equals("1") || entry6.equals("back")){
+                                        if (entry6.equals("1") || entry6.equals("back")) {
                                             break;
                                         }
                                         while (true) {
-                                            if (deposit.isMonyNumber(entry6)){
-                                                deposit.depositmoney(entry3 , Double.parseDouble(entry6));
+                                            if (deposit.isMonyNumber(entry6)) {
+                                                deposit.depositmoney(entry3, Double.parseDouble(entry6));
                                                 System.out.println(Double.parseDouble(entry6));
                                                 System.out.println("The operation was successful.");
+                                                break;
+                                            }else {
+                                                System.out.println("please enter the number");
                                                 break;
                                             }
                                         }
@@ -111,6 +114,7 @@ public class Main {
                                         System.out.println("Please enter the correct word");
                                         break;
                                     }
+                                    break;
                                 }
                             } else {
                                 System.out.println("wrong password");
