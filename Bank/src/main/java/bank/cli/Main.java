@@ -1,6 +1,8 @@
 package bank.cli;
 
 import bank.bankuser.client.transaction.Deposit;
+import bank.bankuser.client.transaction.Transmission;
+import bank.bankuser.client.transaction.Withdrawal;
 import bank.data.DataBase;
 import bank.bankuser.client.User;
 
@@ -14,6 +16,8 @@ public class Main {
         SignUp signUp = new SignUp();
         LogIn logIn = new LogIn();
         Deposit deposit = new Deposit();
+        Withdrawal withdrawal = new Withdrawal();
+        Transmission transmission = new Transmission();
         while (true) {
             System.out.println("Hello");
             System.out.println("Please select one of the options below with number");
@@ -87,10 +91,10 @@ public class Main {
                                 }
                                 while (true) {
                                     if (entry5.equals("1")) {
-                                        System.out.println("Please enter the price");
-                                        System.out.println("1-back");
+                                        System.out.println("Please enter the price or back");
+                                        System.out.println("back");
                                         String entry6 = scanner.next();
-                                        if (entry6.equals("1") || entry6.equals("back")) {
+                                        if (entry6.equals("back")) {
                                             break;
                                         }
                                         while (true) {
@@ -105,7 +109,22 @@ public class Main {
                                             }
                                         }
                                     } else if (entry5.equals("2")) {
-
+                                        System.out.println("Please enter the price or back");
+                                        System.out.println("back");
+                                        String entry7 = scanner.next();
+                                        if (entry7.equals("back")) {
+                                            break;
+                                        }
+                                        while (true) {
+                                            if (deposit.isMonyNumber(entry7)) {
+                                                withdrawal.withdrawalMoney(entry3, Double.parseDouble(entry7));
+                                                withdrawal.addWithdrawalToHistory(entry3, Double.parseDouble(entry7));
+                                                break;
+                                            } else {
+                                                System.out.println("please enter the number");
+                                                break;
+                                            }
+                                        }
                                     } else if (entry5.equals("3")) {
 
                                     } else if (entry5.equals("4")) {

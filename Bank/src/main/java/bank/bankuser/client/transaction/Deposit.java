@@ -34,9 +34,8 @@ public class Deposit {
         LocalDate currentDate = LocalDate.now();
         LocalTime currentTime = LocalTime.now();
         int x = DataBase.getINSTANCE().findAccountIndexWithId(id);
-        ArrayList<String> y = DataBase.getINSTANCE().getUser().get(x).getHistory();
         DataBase.getINSTANCE().getUser().get(x).getHistory()
-                .add("Deposit : " + mony + " at : " + currentDate + " " + currentTime);
+                .addFirst("Deposit : " + mony + " at : " + currentDate + " " + currentTime);
 //        System.out.println("Deposit : " + mony + " at : " + currentDate + " " + currentTime);
     }
 }
